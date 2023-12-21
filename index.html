@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Mountains+of+Christmas:wght@700&display=swap"
+        rel="stylesheet">
     <title>Gift App</title>
     <style>
         body {
@@ -26,19 +28,28 @@
         #giftImage:hover {
             transform: scale(1.1);
         }
+
         h2 {
             font-family: 'Inter', sans-serif;
             font-family: 'Mountains of Christmas', serif;
             font-size: 30px;
-            color:#ff0000;
+            color: #ff0000;
             text-align: center;
         }
+
         h3 {
             font-family: 'Inter', sans-serif;
             font-family: 'Mountains of Christmas', serif;
             font-size: 20px;
             color: #ff0000;
             text-align: center;
+        }
+
+        @media screen {
+            #giftImage:active {
+                transform: scale(1, 1);
+            }
+
         }
     </style>
 </head>
@@ -60,8 +71,11 @@
     <script>
         // Function to display a message when the image is clicked
         function showMessage() {
-            document.getElementById("giftImage").style.display = "none";
-            document.getElementById("text-container").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("giftImage").style.display = "none";
+                document.getElementById("text-container").style.display = "block";
+            }, 500);
+
         }
 
         // Attach the click event to the gift image
