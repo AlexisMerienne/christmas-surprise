@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+    <title>Gift App</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: green;
+        }
+
+        #giftImage {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #giftImage:hover {
+            transform: scale(1.1);
+        }
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-family: 'Mountains of Christmas', serif;
+            font-size: 30px;
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="giftImageContainer">
+        <!-- Replace the image source with your transparent PNG file -->
+        <img id="giftImage" src="assets/gift.png" alt="Wrapped Present" height="300px">
+        <div id="text-container" class="container" style="display: none;margin: 0 1em 0 1em;">
+            <h2>
+                Bon pour deux billets d'un One Man Show de votre choix
+            </h2>
+        </div>
+    </div>
+
+    <script>
+        // Function to display a message when the image is clicked
+        function showMessage() {
+            document.getElementById("giftImage").style.display = "none";
+            document.getElementById("text-container").style.display = "block";
+        }
+
+        // Attach the click event to the gift image
+        document.getElementById('giftImage').addEventListener('click', showMessage);
+    </script>
+</body>
+
+</html>
